@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Temperature Converter</title>
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Temperature Converter</h1>
+    </header>
+    <div class="outlineDiv">
+        <div class="converter">
+            <p>This is a temperature converter. You can put your number on the first box below, and click "Convert"
+                to convert your number to the desired units, or click "Reset" to empty all the boxes, or you
+                can click reverse to switch the unit conversions.
+            </p>
+            <hr>
+            <label for="inputField" id="label1">Celcius (°C) :</label>
+            <input type="number" id="inputField">
+            <div class="inputButton">
+                <button id="btnConvert" onclick="btnConvert()">Convert</button>
+                <button id="btnReset" onclick="btnReset()">Reset</button>
+                <button id="btnReverse" onclick="btnReverse()">Reverse</button>
+            </div>
+            <br>
+            <label for="outputField" id="label2">Fahrenheit (°F) :</label>
+            <input type="text" id="outputField" value="">
+            <br>
+            <label for="calculation">Calculation Method :</label>
+            <textarea rows="4" id="calculation"></textarea>
+        </div>
+        <div class="outlineFormula">
+            <h4>The formula for converting Celcius (°C) to Fahrenheit (°F)</h4>
+            <p class="formula" id="formula1">[A] °C ≘ ([A] × 9/5 + 32) °F</p>
+            <!-- formula satunya adalah /[A] °F ≘ ([A]- 32)  × 5/9 °C/ -->
+            <p>or</p>
+            <p class="formula" id="formula2">[A] °C ≘ ([A] × 1.8 + 32) °F</p>
+        </div>
+    </div>
+</body>
+</html>
