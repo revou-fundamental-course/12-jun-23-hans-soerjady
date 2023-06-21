@@ -1,6 +1,29 @@
+window.onload = init;
+function init(){
+    const numberRegex = /^[0-9]+$/;
+    const inputField = document.getElementById("inputField");
+    console.log(inputField)
+
+    inputField.addEventListener('keypress', function(event){
+        if (!numberRegex.test(event.key)) {
+            event.preventDefault()
+        }
+    })
+}
+// code window onload diatas supaya const inputField tidak null karena harus nunggu loading dulu baru bisa ambil value(?)
+// code diatas untuk validasi bahwa hanya angka yang bisa di tulis di box.
+
 function btnConvert () {
     var state = document.getElementById("label1").innerHTML;
-    console.log(state)
+
+    var inputNum = document.getElementById("inputField").value;
+    if (inputNum == "") {
+        document.getElementById("outputField").value = "";
+        document.getElementById("calculation").value = ""; 
+        alert("The First box can't be empty.");
+        return false;
+    }
+    // code di atas untuk validasi, box tidak boleh kosong
 
     if ( state == "Celcius (°C) :") {
     var inputNum = document.getElementById("inputField").value;
@@ -12,7 +35,6 @@ function btnConvert () {
     var calcMethod = inputNum + " × 9/5 + 32 = " + outputNum;
     document.getElementById("calculation").value = calcMethod;
     // code untuk munculin cara kalkulasi nya
-    
     } else {
     var inputNum = document.getElementById("inputField").value;
     var outputNum = (inputNum - 32) * 5 / 9;

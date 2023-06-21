@@ -13,13 +13,13 @@
     </header>
     <div class="outlineDiv">
         <div class="converter">
-            <p>This is a temperature converter. You can put your number on the first box below, and click "Convert"
-                to convert your number to the desired units, or click "Reset" to empty all the boxes, or you
-                can click reverse to switch the unit conversions.
+            <p>This is a temperature converter. You can put your number on the first box below, and click "<u>Convert</u>"
+                to convert your number to the desired unit, or click "<u>Reset</u> to empty all the boxes, or you
+                can click "<u>Reverse</u>" to switch the unit conversions.
             </p>
             <hr>
             <label for="inputField" id="label1">Celcius (°C) :</label>
-            <input type="number" id="inputField">
+            <input type="text" id="inputField" placeholder="Put your number here.">
             <div class="inputButton">
                 <button id="btnConvert" onclick="btnConvert()">Convert</button>
                 <button id="btnReset" onclick="btnReset()">Reset</button>
@@ -27,10 +27,11 @@
             </div>
             <br>
             <label for="outputField" id="label2">Fahrenheit (°F) :</label>
-            <input type="text" id="outputField" value="">
+            <input type="text" readonly="readonly" id="outputField" placeholder="This is the output box.">
             <br>
             <label for="calculation">Calculation Method :</label>
-            <textarea rows="4" id="calculation"></textarea>
+            <textarea readonly="readonly" rows="3" id="calculation" 
+            placeholder="The calculation method will be shown here."></textarea>
         </div>
         <div class="outlineFormula">
             <h4>The formula for converting Celcius (°C) to Fahrenheit (°F)</h4>
